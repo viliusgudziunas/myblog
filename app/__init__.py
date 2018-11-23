@@ -24,6 +24,12 @@ def create_app(config_class=Config):
     moment.init_app(app)
     login.init_app(app)
 
+    from app.admin import bp as admin_bp
+    app.register_blueprint(admin_bp)
+
+    from app.auth import bp as auth_bp
+    app.register_blueprint(auth.bp)
+
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
