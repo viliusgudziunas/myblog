@@ -3,11 +3,15 @@ from flask import Flask, current_app
 from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_moment import Moment
+from flask_login import LoginManager
 from config import Config
 
 bootstrap = Bootstrap()
 db = SQLAlchemy()
 migrate = Migrate()
+moment = Moment()
+login = LoginManager()
 
 def create_app(config_class=Config):
     """Constructs a Flask application instance"""
@@ -17,6 +21,8 @@ def create_app(config_class=Config):
     bootstrap.init_app(app)
     db.init_app(app)
     migrate.init_app(app, db)
+    moment.init_app(app)
+    login.init_app(app)
 
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)

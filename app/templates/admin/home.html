@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <<h1>Welcome to Admin Page</h1>
+    <a href="{{ url_for('admin.write_post') }}">Write a new post</a>
+{% endblock %}
