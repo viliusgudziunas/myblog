@@ -11,7 +11,7 @@ def editorial():
     """Admin Editorial page"""
     return render_template("admin/home.html", title="Admin Edtorial")
 
-@bp.route("/editorial/write_post")
+@bp.route("/editorial/write_post", methods=["GET", "POST"])
 @login_required
 def write_post():
     """Write Post page"""
@@ -21,4 +21,5 @@ def write_post():
         db.session.add(post)
         db.session.commit()
         flash("The post has been added to the blog!")
-        redirect(url_for("main.write_post"))
+        return redirect(url_for("admin.editorial"))
+    return render_template("admin/write_post.html", title="Write Post", form=form)

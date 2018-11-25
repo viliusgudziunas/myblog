@@ -1,0 +1,23 @@
+Structure:
+main
+/                           - Index Page
+/about_me                   - About Me Page
+
+auth
+/auth/login                 - Login Page
+
+admin
+/admin/editorial            - Admin Editorial Page
+/admin/editorial/write_post - Write Post Page
+
+Names:
+main
+/                           - index()
+/about_me                   - about_me()
+
+auth
+/auth/login                 - login()
+
+admin
+/admin/editorial            - editorial()
+/admin/editorial/write_post - write_post()
