@@ -3,7 +3,7 @@ from flask_login import login_required
 from app import db
 from app.admin.forms import PostForm
 from app.models import Post
-from app.main import bp
+from app.admin import bp
 
 @bp.route("/editorial")
 @login_required

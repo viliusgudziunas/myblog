@@ -10,7 +10,7 @@ from app.models import User
 def login():
     """Login page"""
     if current_user.is_authenticated:
-        return redirect(url_for('main.editorial'))
+        return redirect(url_for('admin.editorial'))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
