@@ -6,8 +6,8 @@ from app import db, login
 class User(UserMixin, db.Model):
     """ Model for users"""
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(36))
-    password_hash = db.Column(db.String(256))
+    username = db.Column(db.String(64))
+    password_hash = db.Column(db.String(128))
 
     def __repr__(self):
         return "<User {}>".format(self.username)

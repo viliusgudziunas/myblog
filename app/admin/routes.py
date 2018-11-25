@@ -5,13 +5,13 @@ from app.admin.forms import PostForm
 from app.models import Post
 from app.main import bp
 
-@bp.route("/admin/home")
+@bp.route("/editorial")
 @login_required
-def admin_home():
-    """Admin Home page"""
-    return render_template("home.html", title="Admin Home")
+def editorial():
+    """Admin Editorial page"""
+    return render_template("admin/home.html", title="Admin Edtorial")
 
-@bp.route("/admin/write_post")
+@bp.route("/editorial/write_post")
 @login_required
 def write_post():
     """Write Post page"""
