@@ -28,9 +28,17 @@ def load_user(id):
 class Post(db.Model):
     """Model for blog posts"""
     id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(128))
     body = db.Column(db.String(400))
-    author = db.Column(db.String(36))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def __repr__(self):
-        return "<Post {}>".format(self.body)
+        return "<Post - {}\n{}>".format(self.title, self.body)
+
+class About_Me_Post(db.Model):
+    """Model for about me post"""
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.String(400))
+
+    def __repr__(self):
+        return "<About Me Post {}>".format(self.body)
