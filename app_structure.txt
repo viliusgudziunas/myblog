@@ -1,13 +1,15 @@
 Structure:
 
-| link                        | description          | function          |
+| link                                   | description               | function                |
 
 main
-| /                           | Index Page           | index()           |
-| /about_me                   | About Me Page        | about_me()        |
-| /about_this_blog            | About This Blog Page | about_this_blog() |
+| /                                      | Index Page                | index()                 |
+| /about_me                              | About Me Page             | about_me()              |
+| /about_this_blog                       | About This Blog Page      | about_this_blog()       |
 
 admin
-| /admin/login                | Admin Login Page     | login()           |
-| /admin/editorial            | Admin Editorial Page | editorial()       |
-| /admin/editorial/write_post | Write Post Page      | write_post()      |
+| /admin/login                           | Admin Login Page          | login()                 |
+| /admin/editorial                       | Admin Editorial Page      | editorial()             |
+| /admin/editorial/write_post            | Write Post Page           | write_post()            |
+| /admin/editorial/write_about_me        | Edit About Me Page        | write_about_me()        |
+| /admin/editorial/write_about_this_blog | Edit About This Blog Page | write_about_this_blog() |
