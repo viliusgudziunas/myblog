@@ -1,8 +1,8 @@
-"""user, post, about_me_post tabels and load_user added
+"""users, posts, about_me_posts tables and user_loader
 
-Revision ID: 91f1331b7db4
+Revision ID: cca51eb5fdc0
 Revises: 
-Create Date: 2018-11-25 14:28:32.110560
+Create Date: 2018-12-03 10:24:12.333807
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '91f1331b7db4'
+revision = 'cca51eb5fdc0'
 down_revision = None
 branch_labels = None
 depends_on = None

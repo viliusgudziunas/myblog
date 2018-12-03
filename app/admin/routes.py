@@ -1,5 +1,5 @@
-from flask import render_template, flash, url_for, redirect, request
 from werkzeug.urls import url_parse
+from flask import render_template, flash, url_for, redirect, request
 from flask_login import login_required, login_user, current_user
 from app import db
 from app.admin.forms import PostForm, LoginForm
@@ -36,7 +36,7 @@ def write_post():
     """Write Post page"""
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(body=form.post.data, author="Admin")
+        post = Post(title=form.title.data, body=form.body.data)
         db.session.add(post)
         db.session.commit()
         flash("The post has been added to the blog!")
