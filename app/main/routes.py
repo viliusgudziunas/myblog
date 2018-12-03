@@ -10,5 +10,10 @@ def index():
 
 @bp.route("/about_me")
 def about_me():
-    """About Me page"""
+    """About me page"""
     return render_template("main/about_me.html", title="About Me")
+
+@bp.route("/about_this_blog")
+def about_this_blog():
+    """About this blog page"""
+    return render_template("main/about_this_blog.html", title="About This Blog")

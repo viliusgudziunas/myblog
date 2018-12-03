@@ -42,3 +42,11 @@ class About_Me_Post(db.Model):
 
     def __repr__(self):
         return "<About Me Post {}>".format(self.body)
+
+class About_This_Blog_Post(db.Model):
+    """Model for about this blog post"""
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.String(400))
+
+    def __repr__(self):
+        return "<About This Page Post {}>".format(self.body)
