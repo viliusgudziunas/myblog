@@ -3,6 +3,6 @@
 {% block app_content %}
     <h1>Welcome To My Blog!</h1>
     {% for post in posts %}
-    <div><p><h4>{{ post.title }}</h4><br><b>{{ post.body }}</b></p></div>
+        {% include "includes/_post.html" %}
     {% endfor %}
 {% endblock %}
