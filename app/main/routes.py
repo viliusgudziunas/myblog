@@ -11,7 +11,8 @@ def index():
 @bp.route("/about_me")
 def about_me():
     """About me page"""
-    return render_template("main/about_me.html", title="About Me")
+    posts = Post.query.all()
+    return render_template("main/about_me.html", title="About Me", posts=posts)
 
 @bp.route("/about_this_blog")
 def about_this_blog():
