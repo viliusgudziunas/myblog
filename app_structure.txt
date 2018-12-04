@@ -13,3 +13,4 @@ admin
 | /admin/editorial/write_post            | Write Post Page           | write_post()            |
 | /admin/editorial/write_about_me        | Edit About Me Page        | write_about_me()        |
 | /admin/editorial/write_about_this_blog | Edit About This Blog Page | write_about_this_blog() |
+| /admin/editorial/post/<id>             | Edit Post Page            | post(id)                |

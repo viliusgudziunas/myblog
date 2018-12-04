@@ -1,22 +1,18 @@
 <html>
     <head>
-        <style>
-            .post {
-                border: 1px solid black;
-                padding: 5px;
-                margin-bottom: 10px;
-            }
-            .pre {
-                background-color: white;
-                border: none;
-            }
-        </style>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
-        <div class="post">
-            <h4>{{ post.title }}</h4>
+        <div class="container">
+            <div class="row post">
+                <h4>{{ post.title }}</h4>
 <pre class="pre">{{ post.body }}</pre>
-            </pre>
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('admin.post', id=post.id) }}">
+                    <img class="img" src="{{ url_for('static', filename='gear.png') }}">
+                    </a>
+                {% endif %}
+            </div>
         </div>
     </body>
 </html>

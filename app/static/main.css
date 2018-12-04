@@ -1,6 +1,17 @@
 .post {
+    position: relative;
     border: 1px solid black;
-    background-color: coral;
     padding: 5px;
     margin-bottom: 10px;
+}
+.pre {
+    background-color: white;
+    border: none;
+}
+.img {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5%;
+    right: 1%;
 }

@@ -68,3 +68,20 @@ def write_about_this_blog():
         flash("About This Blog page has been updated.")
         return redirect(url_for("admin.editorial"))
     return render_template("admin/write_about_this_blog.html", title="Edit About This Blog Page", form=form)
+
+@bp.route("/editorial/post/<id>", methods=["GET", "POST"])
+@login_required
+def post(id):
+    """Edit post page"""
+    post = Post.query.filter_by(id=id).first_or_404()
+    form = PostForm()
+    if form.validate_on_submit():
+        post.title = form.title.data
+        post.body = form.body.data
+        db.session().commit()
+        flash("The changed to the blog post have been saved.")
+        return redirect(url_for("admin.editorial"))
+    elif request.method == "GET":
+        form.title.data = post.title
+        form.body.data = post.body
+    return render_template("admin/post.html", title="Edit Blog Post", post=post, form=form)
