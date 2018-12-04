@@ -5,7 +5,7 @@ from app.models import Post
 @bp.route("/")
 def index():
     """Index page"""
-    posts = Post.query.all()
+    posts = Post.query.order_by(Post.timestamp.desc())
     return render_template("main/index.html", title="Home", posts=posts)
 
 @bp.route("/about_me")

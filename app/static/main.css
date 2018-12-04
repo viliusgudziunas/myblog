@@ -1,12 +1,14 @@
+h4 {
+    font-weight: bold;
+}
 .post {
     position: relative;
     border: 1px solid black;
     padding: 5px;
     margin-bottom: 10px;
 }
-.pre {
-    background-color: white;
-    border: none;
+.p {
+    white-space: pre-wrap;
 }
 .img {
     position: absolute;
