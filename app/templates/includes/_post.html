@@ -1,17 +1,21 @@
 <html>
     <head>
         <style>
-        div.post {
-            border: 1px solid black;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
+            .post {
+                border: 1px solid black;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+            .pre {
+                background-color: white;
+                border: none;
+            }
         </style>
     </head>
     <body>
         <div class="post">
             <h4>{{ post.title }}</h4>
-<pre>{{ post.body }}</pre>
+<pre class="pre">{{ post.body }}</pre>
             </pre>
         </div>
     </body>
