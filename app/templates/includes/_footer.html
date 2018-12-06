@@ -1,0 +1,14 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+</head>
+<div class="container">
+    <div class="row">
+        <div class="col-md-0.5"></div>
+        <div class="col-md-11 footer">
+            <div class="clock">
+                Current Time: {% include "includes/_clock.html" %}
+            </div>
+        </div>
+        <div class="col-md-0.5"></div>
+    </div>
+</div>
