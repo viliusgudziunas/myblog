@@ -34,4 +34,7 @@
 {% block scripts %}
     {{ super() }}
     {{ moment.include_moment() }}
+    <script src="{{ url_for('static', filename='java_script/highlight.js') }}">
+        
+    </script>
 {% endblock %}
